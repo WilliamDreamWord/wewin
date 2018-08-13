@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="nav">
+    <image src="../image/back.png" mode="widthFix" bindtap='back'></image>
+    详情页
+  </view>
+  <view class='content'>
+      <view><text>单据编号：{{docuNum}}</text></view>
+      <view><text>盘点仓库：{{wareHouse}}</text></view>
+      <view><text>创建时间：{{createdDate}}</text></view>
+      <view><text>物料名称：{{matName}}</text></view>
+      <view><text>物料编号：{{matNum}}</text></view>
+      <view><text>物料型号：{{matModel}}</text></view>
+      <view><text>账面数量：{{bookNum}}</text></view>
+      <view><text>盘点数量：{{countNum}}</text></view>
+  </view>
+</view>

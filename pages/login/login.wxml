@@ -1,0 +1,38 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+
+  <!-- 顶部消息提示区域  -->
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+  
+  <!-- 背景图  -->
+  <view class='bg'>
+    <image class='img' src='../image/bg.png'></image>
+  </view>
+
+  <!-- logo图  -->
+  <view class='logo'>
+    <image class='img1' src='../image/logo+标题.png'></image>
+  </view>
+
+  <!-- 表单提交  -->
+  <form class="form" bindsubmit="formSubmit">
+
+    <!-- 账户提交区域  -->
+    <view class="row">
+      <text>账 户：</text>
+      <input type="text" name="userName" placeholder="请输入用户名" value='{{userName}}'/>
+    </view>
+
+    <!-- 密码提交区域  -->
+    <view class="row">
+      <text>密 码：</text>
+      <input type="password" name="userPassword" placeholder="请输入密码" value='{{userPassword}}'/>
+    </view>
+
+    <!-- 登录按钮  -->
+    <view class="row">
+      <button type="primary" form-type="submit">登录</button>
+    </view>
+  </form>
+
+</view>

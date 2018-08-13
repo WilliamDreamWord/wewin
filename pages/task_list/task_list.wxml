@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="header" hidden="{{hideHeader}}">
+    <view>下拉刷新中……</view>
+    <view>{{refreshTime}}</view>
+  </view>
+
+  <view class="nav">
+    盘点任务
+  </view>
+
+  <scroll-view class='list' style="height: 1208rpx" scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+    <view class='item' wx:for="{{contentlist}}" wx:key="index">
+      <image src="{{src}}" mode='widthFix' class="logo"></image>
+      <ul class="top_ul" bindtap="task_place" id="{{item.id}}">
+        <text>{{item.billtitle}}</text>
+        <li class="createtime">创建时间：{{item.createdate}}</li>
+        <li class="num">盘点总数：{{item.total}}</li>
+        <li class="name">创建人：{{item.management_mean}}</li>
+        <li class="existednum">已盘点：{{completedNum}}</li>
+        <image src="../image/arrow_icon.png" mode='widthFix' class="arrow"></image>
+      </ul>
+    </view>
+  </scroll-view>
+
+  <view class="bottom" hidden="{{hideBottom}}">
+  <view>{{loadMoreData}}</view>
+  <view>{{refreshTime}}</view>
+</view>
+
+</view>

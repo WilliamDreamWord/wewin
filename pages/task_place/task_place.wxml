@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="nav">
+    盘点场所
+  </view>
+  <view class="content" scroll-y="true">
+    <view class='list' wx:for="{{contentlist}}" wx:key="{{index}}">
+      <ul class="content_ul" bindtap="storage_place" id="content_ul.id">
+        <text>{{contentlist.storagePlace}}</text>
+        <li class="num">盘点总数：{{contentlist.taskNum}}</li>
+        <li class="pandian_done">已盘点：{{contentlist.taskedNum}}</li>
+        <image src="../image/arrow_icon.png" mode="widthFix"></image>
+      </ul>
+    </view>
+
+  </view>
+</view>

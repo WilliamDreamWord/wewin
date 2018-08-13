@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="nav">
+    <image src="../image/back.png" mode="widthFix" bindtap='back'></image>
+    我的
+  </view>
+  <view class='content'>
+      <view><text>部门：{{department}}</text></view>
+      <view><text>账户：{{account}}</text></view>
+      <view><text>字段：</text></view>
+      <view><text>字段：</text></view>
+      <view><text>字段：</text></view>
+      <view><text>字段：</text></view>
+      <view><text>字段：</text></view>
+      <view><text>字段：</text></view>
+  </view>
+</view>

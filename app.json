@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/main/main",
+    "pages/item_inquiry/item_inquiry",
+    "pages/page_detail/page_detail",
+    "pages/task_list/task_list",
+    "pages/task_place/task_place",
+    "pages/storage_place/storage_place",
+    "pages/list_my/list_my",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "廊坊市电信易耗品管理",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  }
+}

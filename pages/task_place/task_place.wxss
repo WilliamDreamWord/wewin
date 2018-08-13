@@ -1,0 +1,59 @@
+.container{
+  display:flex;
+  justify-content:flex-start;
+  padding:0;
+}
+.nav{
+  display:position;
+  width:100%;
+  /* position:relative;
+  bottom:50rpx; */
+  height:100rpx;
+  background-color:rgb(48,146,247);
+  color:white;
+  text-align:center;
+  line-height:100rpx;
+  font-size: 45rpx;
+}
+.content{
+  position:relative;
+  height:140rpx;
+  width:100%;
+  border-bottom:1px solid #CCC;
+  background-color:white;
+}
+.content_ul text{
+  position:absolute;
+  font-weight:450;
+}
+.list{
+  position: relative;
+}
+.content_ul{
+  position:absolute;
+  height:120rpx;
+  width:100%;
+  left:30rpx;
+  top:10rpx;
+  line-height:50rpx;
+}
+.num{
+  font-size:14px;
+  position:absolute;
+  top:65rpx;
+  color:rgb(67,67,67);
+}
+.pandian_done{
+  color:#0BF ;
+  font-size:14px;
+  top:65rpx;
+  position:absolute;
+  left:330rpx;
+}
+.content_ul image{
+  position:absolute;
+  top:40rpx;
+  width:25rpx;
+  right:50rpx;
+  /* right:30rpx; */
+}

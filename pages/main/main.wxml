@@ -1,0 +1,83 @@
+<!--pages/success/success.wxml-->
+<!--  顶端内容 -->
+<view class="head">
+  <view class='row'>
+    <text>易耗品管理</text>
+  </view>
+</view>
+
+<!-- 中部区域  -->
+<view class='top'>
+    <!--  画布上的顶部提示区域 -->
+    <view class='top2'>
+      <view class='icon'></view>
+      <text>易耗品概况</text>
+    </view>
+
+    <!-- 画布上的数据区域  -->
+    <view class='top3'>
+
+      <!-- 总数量  -->
+      <view class='text1'>
+        <view class='totolNum'>{{totalNum}}</view>
+        <text>总数量</text>
+      </view>
+      <view class="data">
+        <!-- 使用中的数量  -->
+        <view class='text2'>
+          <text>使用中</text>
+          <view class='useNum'>{{useNum}}</view>
+        </view>
+
+        <!-- 空闲品的数量  -->
+        <view class='text3'>
+          <text>空闲品</text>
+          <view class='freeNum'>{{freeNum}}</view>
+        </view>
+
+        <!-- 本月新增的数量  -->
+        <view class='text4'>
+          <text>本月新增</text>
+          <view class='newNum'>{{newNum}}</view>
+        </view>
+      </view>
+    </view>
+</view>
+
+<!-- 底部区域  -->
+<view class='buttom'>
+
+  <!-- 底部区域的画布区域  -->
+  <view class='buttom1'>
+
+    <!-- 画布上的顶部提示区域  -->
+    <view class='buttom2'>
+      <view class='icon_buttom'></view>
+      <text class="icon_text">易耗品管理</text>
+    </view>
+
+    <!-- 画布上的数据区域  -->
+    
+    <view class='buttom3_data'>
+      <!-- 查询图标  -->
+      <view class='image1'>
+        <image class='img1' src='../image/查询图标.png' mode='widthFix' bindtap='Inquire'></image>
+        <text>查询</text>
+      </view>
+      <!-- 盘点图标  -->
+      <view class='image2'>
+        <image class='img2' src='../image/盘点图标.png' mode='widthFix' bindtap='Inventory'></image>
+        <text>盘点</text>
+      </view>
+      <!-- 我的图标  -->
+      <view class='image3'>
+        <image class='img3' src='../image/我的图标.png' mode='widthFix' bindtap='Myself'></image>
+        <text>我的</text>
+      </view>
+
+    </view>
+
+  </view>
+
+
+</view>

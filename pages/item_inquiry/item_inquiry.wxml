@@ -1,0 +1,124 @@
+<view class="container">
+
+  <!-- 顶部消息提示区域  -->
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+  
+  <view class="nav">
+    <image src="../image/back.png" mode="widthFix" bindtap='back'></image>
+    易耗品查询
+  </view>
+  <view class='top'>
+    <view class='top_content'>
+      <!-- <image class="logo" mode="widthFix" src='../image/arrow_icon.png'></image> -->
+      <view class="logo"></view>
+      <text>条件筛选：</text>
+      <image src="../image/scan_icon.png" mode='widthFix' class="logo2" bindtap='scan'></image>
+    </view>
+  </view>
+  <view class="top_below">
+    <view class='top_below_content'>
+      <!-- 头部筛选栏 -->
+      <view class="picker_top">
+        <view class="picker_nav " bindtap='list_department' data-nav="0">
+          <view class="content">{{department_nav}}</view>
+          <view class="icon"></view>
+        </view>
+        <view class="picker_nav border" bindtap='list_typename'>
+          <view class="content">类别</view>
+          <view class="icon"></view>
+        </view>
+        <view class="picker_nav noborder" bindtap='list_status'>
+          <view class="content">现状态</view>
+          <view class="icon"></view>
+        </view>
+      </view>
+
+      <view class="picker_form {{opennav0?'show':'hidden'}}">
+        <view class='name'>
+          <text>名称：</text>
+          <input placeholder='低耗品名称' type='text' bindinput='getName'></input>
+        </view>
+        <view class='type'>
+          <text>规格型号：</text>
+          <input placeholder='品牌规格型号' type='text' bindinput='getModel'></input>
+        </view>
+        <button bindtap='search'>查询</button>
+      </view>
+
+      <!--部门/区县内容栏-->
+      <view class="dep_content {{opennav1?'show':''}}">
+        <view class="dep">
+          <view class="dep_region" wx:for="{{region}}" bindtap='select_reg' data-reg="{{index}}">
+            <view>{{index}}</view>
+          </view>
+        </view>
+
+        <view class='depr right'>
+          <view class="dep_region" wx:for="{{department}}" bindtap='select_dep' data-dep="{{item}}">
+            <view>{{item}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--类别栏-->
+      <view class="type_name {{opennav2?'show':''}}">
+
+        <view class="tn_top">
+          <text>已选类别：</text>
+          <view class='t_type'>{{t_type}}</view>
+          <!-- <view class='n_name'>{{n_name}}</view> -->
+        </view>
+
+        <!--类型栏-->
+        <view class='t_content'>
+          <text class="tn_text">类型：</text>
+          <view class="t_content_middle">
+            <view class="content" wx:for="{{type_all}}" bindtap='select_type' data-sltype="{{item}} ">
+              {{item}}
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 现状态栏 -->
+      <view class="type_name {{opennav3?'show':''}}">
+
+        <view class="tn_top">
+          <text>已选状态：</text>
+          <view class='t_status'>{{t_status}}</view>
+        </view>
+
+        <!--状态栏-->
+        <view class='t_content'>
+          <text class="tn_text">类型：</text>
+          <view class="t_content_middle_status">
+            <view class="content" wx:for="{{status_all}}" bindtap='select_status' data-sltype="{{item}} ">
+              {{item}}
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+
+  <view class="header" hidden="{{hideHeader}}">
+    <view>下拉刷新中……</view>
+    <view>{{refreshTime}}</view>
+  </view>
+
+  <scroll-view class='list' scroll-y="true" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+    <view class='item' wx:for="{{contentlist}}" wx:key="index">
+      <view class='litsText' bindtap='check' id='{{item.id}}'>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="bottom" hidden="{{hideBottom}}">
+    <view>{{loadMoreData}}</view>
+    <view>{{refreshTime}}</view>
+  </view>
+
+</view>

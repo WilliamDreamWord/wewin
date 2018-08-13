@@ -1,0 +1,22 @@
+<view class="container">
+
+  <!-- 顶部消息提示区域  -->
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+  
+  <view class="nav">
+    {{storagePlace}}
+  </view>
+  <view class="top">
+    <text class="num">盘点总数：{{taskNum}}</text>
+    <text class="existed_num">已盘点：{{taskedNum}}</text>
+    <image src='../image/scan_icon.png' bindtap='scan'></image>
+  </view>
+
+  <view class="content" scroll-y="true">
+    <view class="content_son" wx:for="{{contentlist}}" wx:key="{{index}}">
+      <text class="text1" id='{{content_son.id}}'>{{content_son.consumeName}}</text>
+      <view class='pandian' style='background-color: {{color}};'>{{statusText}}</view>
+    </view>
+  </view>
+
+</view>
